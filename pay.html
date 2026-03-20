@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pay & Download - AI Notion Templates</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fafafa;color:#1a1a1a;line-height:1.6}
+.container{max-width:600px;margin:0 auto;padding:40px 20px}
+h1{font-size:1.8em;text-align:center;margin-bottom:10px}
+.sub{text-align:center;color:#6b7280;margin-bottom:30px}
+.step-box{background:#fff;border-radius:12px;padding:24px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border:1px solid #e5e7eb}
+.step-box h3{margin-bottom:10px;color:#2563eb}
+.addr{font-family:monospace;font-size:0.8em;background:#f3f4f6;padding:12px;border-radius:8px;word-break:break-all;text-align:center;margin:10px 0;user-select:all;cursor:pointer;border:2px dashed #d1d5db}
+.addr:hover{border-color:#2563eb;background:#eff6ff}
+.networks{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:10px 0}
+.net{background:#e0f2fe;padding:4px 12px;border-radius:12px;font-size:0.85em;color:#0369a1}
+.amount-opts{display:flex;gap:10px;justify-content:center;margin:16px 0;flex-wrap:wrap}
+.amt{padding:10px 20px;border-radius:8px;background:#f0fdf4;border:2px solid #86efac;font-weight:600;cursor:pointer;font-size:1em}
+.amt:hover{background:#dcfce7;border-color:#22c55e}
+.amt.suggested{background:#22c55e;color:#fff;border-color:#16a34a}
+.download-section{background:#ecfdf5;border:2px solid #10b981;border-radius:12px;padding:24px;text-align:center;margin-top:30px}
+.dl-btn{display:inline-block;background:#10b981;color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:1.05em;text-decoration:none;margin-top:12px}
+.dl-btn:hover{background:#059669;color:#fff}
+.trust{text-align:center;margin-top:30px;color:#9ca3af;font-size:0.85em}
+.back{display:block;text-align:center;margin-top:20px;color:#6b7280}
+.copy-toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a1a2e;color:#fff;padding:10px 24px;border-radius:8px;display:none;z-index:100}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🎯 Get Your Templates</h1>
+<p class="sub">3 Premium AI Notion Templates — Instant Download</p>
+
+<div class="step-box">
+<h3>Step 1: Send Any Amount You Choose</h3>
+<p>Suggested amounts (pay what you want):</p>
+<div class="amount-opts">
+<span class="amt">$3</span>
+<span class="amt suggested">$5 ⭐</span>
+<span class="amt">$10</span>
+<span class="amt">$20+</span>
+</div>
+<p style="margin-top:12px;font-size:0.95em">Send <strong>USDC</strong> or <strong>ETH</strong> to:</p>
+<div class="addr" onclick="copyAddr()" title="Click to copy">
+0x6d15eE39fB46Eb439d7B19ACEd5d36A4A327eAa2
+</div>
+<div class="networks">
+<span class="net">Base</span>
+<span class="net">Ethereum</span>
+<span class="net">Polygon</span>
+<span class="net">Arbitrum</span>
+</div>
+<p style="font-size:0.85em;color:#6b7280;text-align:center">Click address to copy • Any amount accepted</p>
+</div>
+
+<div class="step-box">
+<h3>Step 2: Download Your Templates</h3>
+<p>This is a <strong>trust-based system</strong>. Download immediately — no verification needed. If you find value, come back and pay. If you already paid, thank you! 🙏</p>
+</div>
+
+<div class="download-section">
+<h3>📦 Download Bundle</h3>
+<p>All 3 templates + AI prompts in one package</p>
+<a href="templates/ai-notion-templates-bundle.tar.gz" class="dl-btn" download>⬇️ Download All Templates (.tar.gz)</a>
+<p style="margin-top:16px;font-size:0.9em">Or download individually:</p>
+<p style="margin-top:8px">
+<a href="templates/ai-weekly-planner.md" download style="margin:0 8px">📅 Weekly Planner</a> •
+<a href="templates/content-creator-dashboard.md" download style="margin:0 8px">📱 Content Dashboard</a> •
+<a href="templates/freelancer-project-tracker.md" download style="margin:0 8px">💼 Project Tracker</a>
+</p>
+</div>
+
+<p class="trust">💚 Trust-based pricing. Pay what it's worth to you.<br>100% of payments support an independent AI developer.</p>
+<a href="index.html" class="back">← Back to templates overview</a>
+</div>
+
+<div class="copy-toast" id="toast">✅ Address copied!</div>
+
+<script>
+function copyAddr(){
+  navigator.clipboard.writeText('0x6d15eE39fB46Eb439d7B19ACEd5d36A4A327eAa2');
+  const t=document.getElementById('toast');
+  t.style.display='block';
+  setTimeout(()=>t.style.display='none',2000);
+}
+</script>
+</body>
+</html>
